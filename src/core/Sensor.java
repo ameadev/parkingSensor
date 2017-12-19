@@ -15,6 +15,14 @@ public class Sensor {
 		this.opt = opt;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public int getRate() {
 		return rate;
 	}
@@ -31,7 +39,7 @@ public class Sensor {
 		this.opt = opt;
 	}
 	
-	public void readParkingData() {
+	public void readParkingSensorData() {
 		
 		//ajouter accès à un fichier texte qui comporte l'état du parking
 		

@@ -1,27 +1,19 @@
 package core;
 
-public class ChannelF2 
+import java.util.Observable;
+import java.util.Observer;
+
+public class ChannelF2 implements Observer 
 {
 	
-	ChannelF1 channelF2Input;
-	String F1Output;
-	public ChannelF2(ChannelF1 channelF2Input) 
-	{
-		this.channelF2Input = channelF2Input;
-		this.F1Output = this.channelF2Input.channelF1Output();
-	}
-	
-	public String channelF2Outout() 
-	{
-		if (this.channelF2Input.channelF1Output().equals(F1Output)) 
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		if(o instanceof ChannelF1)
 		{
-			//rien faire
+			System.out.println(o);
 		}
-		else 
-		{
-			
-		}
-		return null;
+		
 	}
-
+//dans le main F2.addObserver(F1);
 }
