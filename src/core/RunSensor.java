@@ -14,6 +14,9 @@ public class RunSensor implements Runnable
 	public void run() {
 		// TODO Auto-generated method stub
 		
+		sensor.readParkingSensorData();
+		
+		
 	}
 
 }

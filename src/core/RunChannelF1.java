@@ -15,6 +15,8 @@ public class RunChannelF1 implements Runnable
 	{
 		// TODO Auto-generated method stub
 		
+		channelF1.setF1Output();
+		
 	}
 
 }

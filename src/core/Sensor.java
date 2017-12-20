@@ -1,5 +1,7 @@
 package core;
 
+import java.util.Random;
+
 public class Sensor {
 
 	private int id;
@@ -7,12 +9,11 @@ public class Sensor {
 	private int rate;
 	private String opt;
 	
-	public Sensor(int id, int range, int rate, String opt) {
+	public Sensor(int id, int range, int rate) {
 		super();
 		this.id = id;
 		this.range = range;
 		this.rate = rate;
-		this.opt = opt;
 	}
 
 	public int getId() {
@@ -41,7 +42,10 @@ public class Sensor {
 	
 	public void readParkingSensorData() {
 		
-		//ajouter accès à un fichier texte qui comporte l'état du parking
+		//
+		Random randomGene = new Random();
+		
+		setOpt(id+":R"+range+"_P"+randomGene.nextInt(2)+":OPT");
 		
 	}
 	

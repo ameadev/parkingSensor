@@ -15,5 +15,6 @@ public class ChannelF2 implements Observer
 		}
 		
 	}
-//dans le main F2.addObserver(F1);
+
+
 }
