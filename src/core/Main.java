@@ -15,6 +15,12 @@ public class Main {
 		do 
 		{
 			Thread tS_1 = new Thread(new RunSensor(senseur_1));
+			try {
+				Thread.sleep(senseur_1.getRate());
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			tS_1.start();
 			Thread tC_1 = new Thread(new RunChannelF1(channelF1_s1));
 			tC_1.start();			

@@ -25,7 +25,7 @@ public class Sensor {
 	}
 
 	public int getRate() {
-		return rate;
+		return rate/1000;
 	}
 
 	public void setRate(int rate) {
