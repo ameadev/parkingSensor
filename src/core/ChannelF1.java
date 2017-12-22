@@ -18,14 +18,18 @@ public class ChannelF1 extends Observable
 	{
 		String oldF1Output = f1Output;
 		String output = channelF1Input.getOpt();
-		output = output.substring(output.indexOf("P")+1, output.indexOf("P")+2);
-		if (output.equals("1")) f1Output = "DÉTECTÉ";
-		else f1Output = "NA";
-		if (f1Output != oldF1Output)
-		{
-			setChanged();
-			notifyObservers(this.f1Output);
+
+		if (output != null) {
+			output = output.substring(output.indexOf("P")+1, output.indexOf("P")+2);
+			if (output.equals("1")) f1Output = "Occupé";
+			else f1Output = "Libre";
+			if (f1Output != oldF1Output)
+			{
+				setChanged();
+				notifyObservers(this.f1Output);
+			}
 		}
+
 		
 	}
 	
@@ -36,7 +40,7 @@ public class ChannelF1 extends Observable
 	
 	public String toString () 
 	{
-		return "Sensor (id = "+channelF1Input.getId()+" infos : "+f1Output+")";
+		return channelF1Input.getId()+ "-" + f1Output;
 	}
 
 }

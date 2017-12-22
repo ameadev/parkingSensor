@@ -43,10 +43,16 @@ public class Sensor {
 	public void readParkingSensorData() {
 		
 		//
-		Random randomGene = new Random();
+		double randomNumber = Math.random();
+		if (randomNumber > 0.5)
+			setOpt(id + ":R" + range + "_P" + 1 + ":OPT");
+		else
+			setOpt(id + ":R" + range + "_P" + 2 + ":OPT");
+
+//		Random randomGene = new Random();
 		
-		setOpt(id+":R"+range+"_P"+randomGene.nextInt(2)+":OPT");
-		
+//		setOpt(id + ":R" + range + "_P" + randomGene.nextInt(1, 3) + ":OPT");
+
 	}
 	
 	
