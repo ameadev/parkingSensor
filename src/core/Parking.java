@@ -17,9 +17,7 @@ public class Parking implements Observer {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame.add(panel1);
-        //Add the ubiquitous "Hello World" label.
 
-        //Display the window.
         frame.pack();
         frame.setVisible(true);
     }
